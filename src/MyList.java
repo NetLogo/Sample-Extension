@@ -3,7 +3,7 @@ import org.nlogo.api.*;
 public class MyList extends DefaultReporter {
   public Syntax getSyntax() {
     return Syntax.reporterSyntax
-        (new int[]{Syntax.TYPE_WILDCARD | Syntax.TYPE_REPEATABLE}, Syntax.TYPE_LIST, 2);
+        (new int[]{Syntax.WildcardType() | Syntax.RepeatableType()}, Syntax.ListType(), 2);
   }
 
   public Object report(Argument args[], Context context)

@@ -4,7 +4,7 @@ public class IntegerList extends DefaultReporter {
   // take one number as input, report a list
   public Syntax getSyntax() {
     return Syntax.reporterSyntax(
-        new int[]{Syntax.TYPE_NUMBER}, Syntax.TYPE_LIST
+        new int[]{Syntax.NumberType()}, Syntax.ListType()
     );
   }
 
