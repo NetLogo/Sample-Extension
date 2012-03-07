@@ -6,12 +6,19 @@ ifeq ($(origin NETLOGO), undefined)
   NETLOGO=../..
 endif
 
+ifeq (,$(findstring Cygwin,$(shell uname)))
+  COLON=\;
+  JAVA_HOME := `cygpath -up "$(JAVA_HOME)"`
+else
+  COLON=:
+endif
+
 JAVAC=$(JAVA_HOME)/bin/javac
 SRCS=$(wildcard src/*.java)
 
 sample.jar: $(SRCS) manifest.txt Makefile $(JARS)
 	mkdir -p classes
-	$(JAVAC) -g -deprecation -Xlint:all -Xlint:-serial -Xlint:-path -encoding us-ascii -source 1.5 -target 1.5 -classpath $(NETLOGO)/NetLogoLite.jar:$(JARSPATH) -d classes $(SRCS)
+	$(JAVAC) -g -deprecation -Xlint:all -Xlint:-serial -Xlint:-path -encoding us-ascii -source 1.5 -target 1.5 -classpath $(NETLOGO)/NetLogoLite.jar$(COLON)$(JARSPATH) -d classes $(SRCS)
 	jar cmf manifest.txt sample.jar -C classes .
 
 sample.zip: sample.jar
