@@ -4,9 +4,7 @@ This is a very small example NetLogo extension, written in Java.
 
 ## Building
 
-Use the NETLOGO environment variable to tell the Makefile which NetLogo.jar to compile against.  For example:
-
-    NETLOGO=/Applications/NetLogo\\\ 5.0 make
+Run `make`.
 
 If compilation succeeds, `sample.jar` will be created.
 
