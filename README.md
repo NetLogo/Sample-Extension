@@ -4,9 +4,9 @@ This is a very small example NetLogo extension, written in Java.
 
 ## Building
 
-Use the NETLOGO environment variable to tell the Makefile which NetLogo.jar to compile against.  For example:
+Use the netlogo.jar.url environment variable to tell sbt which NetLogo.jar to compile against (defaults to NetLogo 5.3). For example:
 
-    NETLOGO=/Applications/NetLogo\\\ 5.0 make
+    sbt -Dnetlogo.jar.url=file:///path/to/NetLogo/target/NetLogo.jar package
 
 If compilation succeeds, `sample.jar` will be created.
 
