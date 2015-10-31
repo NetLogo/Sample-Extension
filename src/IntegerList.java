@@ -1,9 +1,11 @@
 import org.nlogo.api.*;
+import org.nlogo.core.Syntax;
+import org.nlogo.core.SyntaxJ;
 
 public class IntegerList extends DefaultReporter {
   // take one number as input, report a list
   public Syntax getSyntax() {
-    return Syntax.reporterSyntax(
+    return SyntaxJ.reporterSyntax(
         new int[]{Syntax.NumberType()}, Syntax.ListType()
     );
   }
