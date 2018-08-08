@@ -2,6 +2,8 @@ enablePlugins(org.nlogo.build.NetLogoExtension)
 
 name := "sample"
 
+version := "1.1.0"
+
 netLogoClassManager := "SampleExtension"
 
 netLogoZipSources   := false
