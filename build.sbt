@@ -2,7 +2,7 @@ enablePlugins(org.nlogo.build.NetLogoExtension)
 
 name := "sample"
 
-version := "1.1.0"
+version := "1.1.1"
 
 netLogoClassManager := "SampleExtension"
 
@@ -19,4 +19,4 @@ javacOptions ++= Seq("-g", "-deprecation", "-Xlint:all", "-Xlint:-serial", "-Xli
 netLogoTarget :=
   org.nlogo.build.NetLogoExtension.directoryTarget(baseDirectory.value)
 
-netLogoVersion := "6.0.4-9328ba6"
+netLogoVersion := "6.1.0-RC1"
