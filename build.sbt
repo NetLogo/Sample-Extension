@@ -1,23 +1,15 @@
 enablePlugins(org.nlogo.build.NetLogoExtension)
 
 name := "sample"
-
 version := "1.1.1"
+isSnapshot := true
 
+javaSource in Compile := baseDirectory.value / "src" / "main"
+javacOptions ++= Seq("-g", "-deprecation", "-Xlint:all", "-Xlint:-serial", "-Xlint:-path", "-encoding", "us-ascii")
+
+scalaVersion := "2.12.12"
+scalaSource in Test := baseDirectory.value / "src" / "test"
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-Xfatal-warnings", "-feature", "-encoding", "us-ascii")
+
+netLogoVersion := "6.2.2"
 netLogoClassManager := "SampleExtension"
-
-netLogoZipSources   := false
-
-javaSource in Compile := baseDirectory.value / "src"
-
-javacOptions ++= Seq("-g", "-deprecation", "-Xlint:all", "-Xlint:-serial", "-Xlint:-path",
-  "-encoding", "us-ascii")
-
-// The remainder of this file is for options specific to bundled netlogo extensions
-// if copying this extension to build your own, it may be best to delete
-// everything below line 14
-netLogoTarget :=
-  org.nlogo.build.NetLogoExtension.directoryTarget(baseDirectory.value)
-
-resolvers      += "netlogo" at "https://dl.cloudsmith.io/public/netlogo/netlogo/maven/"
-netLogoVersion := "6.2.0-d27b502"

@@ -1,7 +1,5 @@
-/classes
-/sample.jar
-/sample.jar.pack.gz
-/sample.zip
-/project/project
-target/
 .bundledFiles
+target/
+extensions/
+/*.jar
+/*.zip
