@@ -1,7 +1,7 @@
 enablePlugins(org.nlogo.build.NetLogoExtension)
 
 name := "sample"
-version := "1.1.1"
+version := "1.2.0"
 isSnapshot := true
 
 Compile / javaSource := baseDirectory.value / "src" / "main"
