@@ -13,3 +13,5 @@ scalacOptions ++= Seq("-deprecation", "-unchecked", "-Xfatal-warnings", "-featur
 
 netLogoVersion      := "7.0.0-424b50b"
 netLogoClassManager := "SampleExtension"
+
+resolvers += "jitpack" at "https://jitpack.io"
