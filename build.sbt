@@ -11,5 +11,5 @@ scalaVersion := "3.7.0"
 Test / scalaSource := baseDirectory.value / "src" / "test"
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-Xfatal-warnings", "-feature", "-encoding", "us-ascii", "-release", "11")
 
-netLogoVersion      := "7.0.4"
+netLogoVersion      := "7.0.4-bfe6fe4"
 netLogoClassManager := "SampleExtension"
